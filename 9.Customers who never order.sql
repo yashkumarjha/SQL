@@ -1,0 +1,7 @@
+-- https://leetcode.com/problems/customers-who-never-order/
+
+SELECT C.NAME AS CUSTOMERS
+FROM CUSTOMERS C 
+LEFT JOIN ORDERS O
+ON C.ID = O.CUSTOMERID
+WHERE O.CUSTOMERID IS NULL;
